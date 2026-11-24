@@ -198,7 +198,8 @@
   <script>
     // ================= API & GATEWAY CONFIG =================
     // Jab Termux backend live hoga, tab yahan Cloudflare Tunnel URL dalenge:
-    const BACKEND_API_URL = ""; // Example: "https://pay.tzxtanzio.in"
+    const BACKEND_API_URL = "https://venture-close-parents-tiles.trycloudflare.com";
+    
     // ========================================================
 
     // Demo Catalog (Jab Backend connect hoga toh yeh automatically live DB se load hoga)
@@ -234,7 +235,7 @@
         id: 4,
         title: "Portable Rechargeable Mini Blender",
         category: "High Demand",
-        price: 599,
+        price: 1,
         mrp: 1199,
         features: "6 Stainless Blades • USB Rechargeable • BPA Free",
         image: "https://images.unsplash.com/photo-1570222094114-d054a817e56b?w=700&q=80"
@@ -298,7 +299,8 @@
       formData.append("address", document.getElementById("custAddress").value);
       formData.append("pincode", document.getElementById("custPincode").value);
 
-      const BACKEND_API_URL = "https://venture-close-parents-tiles.trycloudflare.com";
+      if (!BACKEND_API_URL) {
+        
         btn.innerText = "Pay via UPI →";
         btn.disabled = false;
         closeModal();
