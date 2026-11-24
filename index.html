@@ -298,8 +298,8 @@
       formData.append("address", document.getElementById("custAddress").value);
       formData.append("pincode", document.getElementById("custPincode").value);
 
-      if (!BACKEND_API_URL) {
-        alert("✅ Website Frontend Ready! Agle step mein hum isko aapke Personal UPI Gateway se connect karenge.");
+      const BACKEND_API_URL = "https://venture-close-parents-tiles.trycloudflare.com";
+      
         btn.innerText = "Pay via UPI →";
         btn.disabled = false;
         closeModal();
